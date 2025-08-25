@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab-1-vegenere-cipher-benji-stansfield", "lab-1-vegenere-cipher-benji-stansfield.csproj", "{010E4BA1-E4BC-4444-991C-785E78A8FD70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{010E4BA1-E4BC-4444-991C-785E78A8FD70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010E4BA1-E4BC-4444-991C-785E78A8FD70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010E4BA1-E4BC-4444-991C-785E78A8FD70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010E4BA1-E4BC-4444-991C-785E78A8FD70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {439469D7-1F9F-4702-BCD8-5C62E96BAF8E}
+	EndGlobalSection
+EndGlobal
