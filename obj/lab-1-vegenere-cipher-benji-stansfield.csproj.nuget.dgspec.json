@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vegenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj": {}
+    "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vigenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vegenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj": {
+    "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vigenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vegenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj",
+        "projectUniqueName": "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vigenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj",
         "projectName": "lab-1-vegenere-cipher-benji-stansfield",
-        "projectPath": "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vegenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj",
+        "projectPath": "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vigenere-cipher-benji-stansfield\\lab-1-vegenere-cipher-benji-stansfield.csproj",
         "packagesPath": "C:\\Users\\benji\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vegenere-cipher-benji-stansfield\\obj\\",
+        "outputPath": "C:\\Users\\benji\\code\\my-code-dir\\object-oriented-programming\\lab-1-vigenere-cipher-benji-stansfield\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benji\\AppData\\Roaming\\NuGet\\NuGet.Config"
