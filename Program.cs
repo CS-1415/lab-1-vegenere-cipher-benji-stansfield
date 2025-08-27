@@ -13,9 +13,9 @@ Debug.Assert(IsValidString("howdy") == true);
 Debug.Assert(!IsValidString("Howdy") == true);
 Debug.Assert(IsValidString("howDy") == false, "String cannot contain any uppercase letters");
 
-Debug.Assert(ShiftLetter('a', 'b') == 'b');
-Debug.Assert(ShiftLetter('d', 'g') == 'j');
-Debug.Assert(ShiftLetter('w', 'h') == 'd');
+Debug.Assert(ShiftLetter('a', 'b') == 'b', "a+b should equal b");
+Debug.Assert(ShiftLetter('d', 'g') == 'j', "d+g should equal j");
+Debug.Assert(ShiftLetter('w', 'h') == 'd', "w+h should wrap and equal d");
 
 int validMessageInput = 0;
 string message;
@@ -57,24 +57,22 @@ do
 
 } while (validMessageInput != encryptionKey.Length);
 
+/*Checks to make sure input has only lowercase letters*/
+static bool IsLowercaseLetter(char c)
+{
+    if (c != char.ToLower(c) || c == ' ' || !char.IsLetter(c)) //tests if the character is lowercase, not a space, or a letter
+    {
+        Console.WriteLine("Only lowercase letters are allowed.");
+        return false;
+    }
+    else
+        return true;
+}
+
 if (IsValidString(message) && IsValidString(encryptionKey))
     Console.WriteLine("Beginning encryption...");
 else
     Console.WriteLine("Something went wrong, please try again.");
-
-    //Console.Write($"ENCRYPTED MESSAGE = {encryptedMessage}"); //prints the message after encryption
-
-    /*Checks to make sure input has only lowercase letters*/
-    static bool IsLowercaseLetter(char c)
-    {
-        if (c != char.ToLower(c) || c == ' ' || !char.IsLetter(c)) //tests if the character is lowercase, not a space, or a letter
-        {
-            Console.WriteLine("Only lowercase letters are allowed.");
-            return false;
-        }
-        else
-            return true;
-    }
 
 /*Checks if the string is valid*/
 static bool IsValidString(string input)
@@ -85,8 +83,11 @@ static bool IsValidString(string input)
         return true;
 }
 
+/*Encrypt the message*/
 static char ShiftLetter(char messageLetter, char cipher)
 {
-    char shiftedLetter = 'x';
-    return shiftedLetter;
+    int messageValue = messageLetter - 'a';
+    int cipherValue = cipher - 'a';
+    int shiftedLetter = (messageValue + cipherValue) % 26; //allows the letters to wrap around
+    return (char)(shiftedLetter + 'a');
 }
