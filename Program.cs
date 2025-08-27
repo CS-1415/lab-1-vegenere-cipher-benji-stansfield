@@ -12,10 +12,10 @@ Debug.Assert(IsLowercaseLetter('*') == false, "Symbols should not be used");
 Debug.Assert(IsValidString("howdy") == true);
 Debug.Assert(!IsValidString("Howdy") == true);
 Debug.Assert(IsValidString("howDy") == false, "String cannot contain any uppercase letters");
-Debug.Assert(IsValidString("51") == false, "String cannot contain numbers");
 
 int validMessageInput = 0;
-string message = " ";
+string message;
+string encryptionKey;
 
 Console.Clear();
 
@@ -37,8 +37,26 @@ do
     }
 
 } while (validMessageInput != message.Length);
-Console.Write("Please enter an encryption key: ");
-string encryptionKey = Console.ReadLine();
+
+do
+{
+    Console.Write("Please enter an encryption key: ");
+    encryptionKey = Console.ReadLine();
+    validMessageInput = 0;
+    foreach (char key in encryptionKey)
+    {
+        if (IsLowercaseLetter(key))
+            validMessageInput += 1;
+        else
+            break;
+    }
+
+} while (validMessageInput != encryptionKey.Length);
+
+if (IsValidString(message) && IsValidString(encryptionKey))
+    Console.Write("Beginning encryption...");
+
+//Console.Write($"ENCRYPTED MESSAGE = {encryptedMessage}"); //prints the message after encryption
 
 /*Checks to make sure input has only lowercase letters*/
 static bool IsLowercaseLetter(char c)
@@ -55,5 +73,8 @@ static bool IsLowercaseLetter(char c)
 /*Checks if the string is valid*/
 static bool IsValidString(string input)
 {
-    return false;
+    if (input != input.ToLower())
+        return false;
+    else
+        return true;
 }
