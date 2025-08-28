@@ -20,6 +20,8 @@ Debug.Assert(ShiftLetter('w', 'h') == 'd', "w+h should wrap and equal d");
 int validMessageInput = 0;
 string message;
 string encryptionKey;
+string encryptedMessage = "";
+int keyIndex = 0;
 
 Console.Clear();
 
@@ -69,11 +71,6 @@ static bool IsLowercaseLetter(char c)
         return true;
 }
 
-if (IsValidString(message) && IsValidString(encryptionKey))
-    Console.WriteLine("Beginning encryption...");
-else
-    Console.WriteLine("Something went wrong, please try again.");
-
 /*Checks if the string is valid*/
 static bool IsValidString(string input)
 {
@@ -81,6 +78,22 @@ static bool IsValidString(string input)
         return false;
     else
         return true;
+}
+
+if (IsValidString(message) && IsValidString(encryptionKey))
+    Console.WriteLine("Beginning encryption...");
+else
+    Console.WriteLine("Something went wrong, please try again.");
+
+
+/*Shift each letter of the message*/
+foreach (char letter in message)
+{
+    char cipherLetter = encryptionKey[keyIndex];
+    char shiftedLetter = ShiftLetter(letter, cipherLetter);
+    encryptedMessage += shiftedLetter;
+
+    keyIndex = (keyIndex + 1) % encryptionKey.Length; //allows for the encryption key to cycle through
 }
 
 /*Encrypt the message*/
@@ -91,3 +104,6 @@ static char ShiftLetter(char messageLetter, char cipher)
     int shiftedLetter = (messageValue + cipherValue) % 26; //allows the letters to wrap around
     return (char)(shiftedLetter + 'a');
 }
+
+/*Print message*/
+Console.WriteLine($"Encrypted message: {encryptedMessage}");
